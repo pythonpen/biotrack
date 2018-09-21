@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="alarm_tree">
+      <field name="name">Alarms</field>
+      <field name="model">alarm.flag</field>
+      <field name="arch" type="xml" >
+        <tree string="Alarms/Flag" create="false" >
+            <field name="name" />
+            <field name="start_date"/>
+            <field name="end_date"/>
+            <field name="status" string="Action Status"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_alarm" >
+      <field name="name">Alarm/Flag</field>
+      <field name="res_model">alarm.flag</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Alarm/Flag" id="alarm_menu" action="action_alarm" sequence="8"/>
+
+  </data>
+</odoo>

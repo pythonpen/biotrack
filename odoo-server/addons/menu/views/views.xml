@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+        <!--<record id="action_contact_service" model="ir.actions.act_window">
+            <field name="name">Contacts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a contact in your contacts directory.
+              </p><p>
+                Odoo helps you easily track all activities related to
+                a customer: discussions, history of business opportunities,
+                documents, etc.
+              </p>
+            </field>
+        </record>-->
+        <record id="action_contact_service_view_kanban" model="ir.actions.act_window.view">
+            <field name="name">Contacts</field>
+            <field name="model">hr.employee</field>
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="	hr_kanban_view_employees"/>
+            <!--<field name="act_window_id" ref="action_contact_service"/>-->
+        </record>
+        <!--<record id="action_contact_service_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="base.view_partner_tree"/>
+            <field name="act_window_id" ref="action_contact_service"/>
+        </record>
+        <record id="action_contact_service_view_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="base.view_partner_form"/>
+            <field name="act_window_id" ref="action_contact_service"/>
+        </record>-->
+        <menuitem name="Contact Service" id="conatct_service" sequence="1" action="action_contact_service" />
+      <!--
+
+        <menuitem name="Contact Service" id="menu.conatct_service" sequence="1" action="action_contact_service" />
+
+        <menuitem name="Search" id="menu.search" sequence="2" action="action_search_equipment"/>
+
+        <menuitem name="Add Equipments" id="menu.add_equipment" sequence="3" action="action_add_equipment"/>
+
+        <menuitem name="Spare" id="menu.spare" sequence="4" action="action_spare"/>
+
+        <menuitem name="Rental Equipments" id="menu.rental" sequence="5" action="action_rental"/>
+
+        <menuitem name="Inoperative Equipments" id="menu.inoperative" sequence="6" action="actioninoperative"/>
+
+        <menuitem name="Maintenance" id="menu.maintenance" sequence="7" action="action_maintenance"/>
+
+        <menuitem name="Supplier Details" id="menu.supplier" sequence="8" action="action_vendor"/>
+
+        <menuitem name="AMC/CMC/Warranty" id="menu.inoperative" sequence="9" action="action_warranty"/>
+
+        <menuitem name="Alarm/Flag" id="menu.alarm" sequence="10" action="action_alarm"/>
+-->
+
+  </data>
+</odoo>
